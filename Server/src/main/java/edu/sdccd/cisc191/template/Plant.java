@@ -4,15 +4,18 @@ package edu.sdccd.cisc191.template;
  * Plant Class is an abstract class representing a generic plant
  * It is used as a based class to create more specific type of plants
  */
-public abstract class Plant {
+
+
+
+public class Plant {
     /**
      * Plant name
      */
-    private String name;
+    private final String name;
     /**
      * Plant quantity
      */
-    private int quantity;
+    private final int quantity;
 
     /**
      * Constructor for a plant
@@ -40,20 +43,10 @@ public abstract class Plant {
         return quantity;
     }
 
-    /**
-     * Set the plant name
-     * @param name the name of the plant
-     */
-    public void setName(String name) {
-        this.name = name;
-    }
 
-    /**
-     * Set the quantity of the plant
-     * @param quantity the quantity of the plant
-     */
-    public void setQuantity(int quantity) {
-        this.quantity = quantity;
-    }
+
+
+
+
 
 }
