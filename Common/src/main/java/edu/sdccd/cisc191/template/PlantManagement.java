@@ -1,6 +1,6 @@
 package edu.sdccd.cisc191.template;
 
-import java.util.ArrayList;
+import java.util.*;
 
 /**
  * The PlantManagement Class manages or holds the elements in the ArrayList of plants
@@ -28,16 +28,11 @@ public class PlantManagement {
     }
 
     /**
-     * The method deletePlant deletes plant from the ArrayList
+     * The method deletePlant deletes plant from the ArrayList using Stream API removeIf
      * @param name the name of the plant to delete
      */
     public void deletePlant(String name) {
-        for (Plant plantLoop : plants) {
-            if (plantLoop.getName().equalsIgnoreCase(name)) {
-                plants.remove(plantLoop);
-                break;
-            }
-        }
+        plants.removeIf(plantStream -> plantStream.getName().equalsIgnoreCase(name));
     }
 
     /**

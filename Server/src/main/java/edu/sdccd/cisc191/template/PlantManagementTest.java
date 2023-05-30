@@ -9,6 +9,19 @@ import static org.junit.Assert.*;
 public class PlantManagementTest {
 
     /**
+     * This method tests the deletePlant method in the PlantManagement class which check if the plant in the
+     * ArrayList is successfully able to delete object Plant in the ArrayList of Plants
+     *
+     */
+    @Test
+    public void testDeletePlant() {
+        PlantManagement plantManagement = new PlantManagement();
+        Plant okra = new Plant("Okra", 1);
+        plantManagement.addPlant(okra);
+        plantManagement.deletePlant("okra");
+    }
+
+    /**
      * This method tests the addPlant method in the PlantManagement class which check if the ArrayList is successfully
      * able to add object Plant in the ArrayList of Plants
      *

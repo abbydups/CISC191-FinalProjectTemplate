@@ -166,7 +166,6 @@ public class Client extends Application {
         }
         listAllPlants();
     }
-
     /**
      * The main method creates a socket and connects to the server.
      * It sends a serialized VegetableRequest Object to the server
